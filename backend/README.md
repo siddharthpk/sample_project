@@ -2,14 +2,14 @@
 
 A backend for the sample project.
 
-## Installation
+## Installation (Linux/OSX)
 
 1. `pip install -r requirements.txt`
 
 2. `python manage.py migrate`
 
-## Usage
+## Development (Linux/OSX)
 
-```bash
-python manage.py runserver
-```
+1. `python manage.py runserver`
+
+2. Visit http://localhost:8000/admin to add users for testing.
