@@ -10,6 +10,8 @@ You are encouraged to read the django documentation [here](https://docs.djangopr
 
 The features you do implement must use the [git feature branch model](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow). For more information on development workflow, visit our [docs](https://github.com/Digital-Health-Lab-UVic/digital-health-lab-docs/blob/master/sections/Development-Workflow.md).
 
+## Submission
+
 Once the features are implemented, push your cloned repository to your github page and email us the link. 
 
 Please email digitalhealth@uvic.ca with the subject 'Dev Sample Project - Your Name' if you have any additional questions.
