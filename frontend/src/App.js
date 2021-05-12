@@ -42,14 +42,13 @@ function App() {
         headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
-        }
+        },
+        body: JSON.stringify(newUser),
     };
     try {
-      const fetchResponse = await fetch(url + "/users/add", settings);
-      const data = await fetchResponse.json();
-      tmp = data
+      const fetchResponse = await fetch(url + "/users/add/", settings);
       if(fetchResponse){
-        return newUser;
+        console.log("Added " + newUser +  " Successfully");
       }
     } catch (err) {
       return err;
