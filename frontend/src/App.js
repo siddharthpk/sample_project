@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Axios from 'axios';
 
 const url = "http://localhost:8000";
 
 function App() {
+  let tmp
   const [users, setUsers] = useState();
   const [isFetching, setFetching] = useState(false);
+  const [newUser, setNewUser] = useState();
+
 
   const fetchUsers = async () => {
     setFetching(true);
@@ -32,6 +36,26 @@ function App() {
     fetchUsers();
   }, []);
 
+  const addUser = async () =>{
+    const settings = {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        }
+    };
+    try {
+      const fetchResponse = await fetch(url + "/users/add", settings);
+      const data = await fetchResponse.json();
+      tmp = data
+      if(fetchResponse){
+        return newUser;
+      }
+    } catch (err) {
+      return err;
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -44,9 +68,18 @@ function App() {
             ))}
           </ul>
         )}
+        <form>
+          <label>
+            Name : 
+            <input type="text" name="name" onChange = { e =>setNewUser(e.target.value)} />
+          </label>
+          <br></br>
+          <input type="submit" name="Action"  value='Add' onClick={addUser}/>
+        </form>
       </header>
     </div>
   );
+
 }
 
 export default App;
