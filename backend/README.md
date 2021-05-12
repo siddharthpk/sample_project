@@ -13,3 +13,8 @@ A backend for the sample project.
 1. `python manage.py runserver`
 
 2. Visit http://localhost:8000/admin to add users for testing.
+
+## Coding Challenge Work
+
+- Added a new route "users/add" to add new users to DB
+- Screenshots added for the api page.
