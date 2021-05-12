@@ -13,8 +13,9 @@ def index(request):
     users = serializers.serialize("json", User.objects.all())
     return HttpResponse(users)
 
-
+# Added csrf exempt to bypass 403 error in previous version of api
 @csrf_exempt
+
 @api_view(['POST'])
 
 def addUser(request):
