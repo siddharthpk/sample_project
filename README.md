@@ -18,7 +18,6 @@ Once the features are implemented, push your cloned repository to **your github 
 
 Please email the project to digitalhealth@uvic.ca with the subject 'Dev Sample Project - Your Name' or email us if you have any additional questions.
 
-
 ## Coding Challenge Work
 
 ### Approach
